@@ -17,6 +17,7 @@ body {
     font-family: 'Montserrat', system-ui, sans-serif;
     background-color: var(--hero-bg);
     color: #25324b;
+    margin: 0;
 }
 
 .page-body {
@@ -26,6 +27,16 @@ body {
 
 .page-welcome {
     overflow: hidden;
+}
+
+body.page-welcome {
+    background-color: transparent;
+}
+
+body.page-welcome .page-body {
+    min-height: 100vh;
+    padding-top: 0;
+    display: flex;
 }
 
 body.page-home,
@@ -116,6 +127,8 @@ body.page-contact .contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 100vh;
 }
 
 .nexora-layout::before {
@@ -168,13 +181,17 @@ body.page-contact .contact-section {
 /* Hero Section */
 .welcome-hero {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 0;
     max-width: 800px;
     z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcome-main-title {
-    margin-top: 50px;
+    margin-top: 0;
     font-size: 60px;
     color: #0a3367;
     font-weight: 800;
